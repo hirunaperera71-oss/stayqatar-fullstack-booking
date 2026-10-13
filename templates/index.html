@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="StayQatar - modern hotel and villa discovery and booking website">
+  <title>StayQatar — Find your perfect stay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#"><span class="brand-mark">S</span><span>stay<span>qatar</span></span></a>
+  <nav>
+    <a href="#stays">Stays</a><a href="#experiences">Experiences</a><a href="#about">About</a>
+  </nav>
+  <div class="nav-actions"><button class="icon-btn" id="favoritesBtn" title="Favorites">♡ <span id="favCount">0</span></button><button class="login-btn" onclick="openLogin()">Log in</button><button class="menu-btn">☰</button></div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-slides">
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1800&q=90')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1800&q=90')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=90')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="eyebrow">YOUR NEXT ESCAPE</div>
+    <h1>Find a place<br>you'll <em>love</em> to stay.</h1>
+    <p>Beautiful stays, unforgettable experiences and effortless booking in Qatar.</p>
+  </div>
+  <div class="hero-dots"><button class="dot active" data-i="0"></button><button class="dot" data-i="1"></button><button class="dot" data-i="2"></button></div>
+</section>
+
+<section class="search-wrap">
+  <form id="searchForm" class="search-bar">
+    <div class="field"><label>Where</label><div><span>⌖</span><input id="where" placeholder="Qatar, Doha, Lusail..." /></div></div>
+    <div class="field"><label>Check in</label><div><span>▣</span><input id="checkin" type="date"></div></div>
+    <div class="field"><label>Check out</label><div><span>▣</span><input id="checkout" type="date"></div></div>
+    <div class="field"><label>Guests</label><div><span>♙</span><input id="guests" type="number" min="1" value="2"></div></div>
+    <button class="search-btn" type="submit">Search <span>→</span></button>
+  </form>
+</section>
+
+<section id="stays" class="section">
+  <div class="section-head"><div><span class="eyebrow dark">CURATED FOR YOU</span><h2>Recommended places to stay</h2></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="Hotel">Hotels</button><button class="filter" data-filter="Villa">Villas</button><button class="filter" data-filter="Apartment">Apartments</button></div></div>
+  <div id="results" class="cards"></div>
+</section>
+
+<section id="experiences" class="experience">
+  <div><span class="eyebrow dark">BEYOND THE ROOM</span><h2>Make your stay<br><em>memorable.</em></h2><p>Discover desert adventures, cultural treasures and unforgettable dining experiences.</p><button class="outline-btn">Explore experiences <span>→</span></button></div>
+  <div class="experience-img"></div>
+</section>
+
+<section id="about" class="features">
+  <div><span class="feature-icon">✦</span><h3>Handpicked stays</h3><p>We select beautiful places with excellent guest experiences.</p></div>
+  <div><span class="feature-icon">↯</span><h3>Easy booking</h3><p>Search, compare and request your stay in just a few clicks.</p></div>
+  <div><span class="feature-icon">♡</span><h3>Made for memories</h3><p>Find the right place for weekends, family trips and adventures.</p></div>
+</section>
+</main>
+
+<footer><div class="brand"><span class="brand-mark">S</span><span>stay<span>qatar</span></span></div><p>© 2026 StayQatar. A portfolio-ready demo project.</p></footer>
+
+<div id="modal" class="modal hidden"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<div id="toast" class="toast"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
