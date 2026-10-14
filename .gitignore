@@ -3,4 +3,3 @@ __pycache__/
 *.pyc
 bookings.db
 .env
-.DS_Store
